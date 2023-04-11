@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lists Level 1</title>
+</head>
+
+<body>
+    <!-- Basic unorder list -->
+    <h2>Basic UnOrder List</h2>
+    <ul>
+        <li>Brownie</li>
+        <li>Cake</li>
+        <li>Donut</li>
+        <li>Cheese cake</li>
+    </ul>
+    <h2>Different Bullets in UnOrder List</h2>
+    <ul style="list-style:disc;">
+        <li>Ice-Cream</li>
+        <li>Chocobar</li>
+        <li>Cold-Coffee</li>
+    </ul>
+    <ul style="list-style:square">
+        <li>Sugar</li>
+        <li>Salt</li>
+        <li>Sour</li>
+    </ul>
+    <ul style="list-style: circle;">
+        <li>Car</li>
+        <li>Bike</li>
+        <li>Scooty</li>
+    </ul>
+    <ul>
+        <li>Areoplane</li>
+        <li>Bus</li>
+        <li>Ship</li>
+    </ul>
+    <!-- Basic order list -->
+    <h2>Basic Order List.</h2>
+    <h3>Top ten dog names in the USA.</h3>
+    <ol>
+        <li>Max</li>
+        <li>Jake</li>
+        <li>Buddy</li>
+        <li>Maggie</li>
+        <li>Bear</li>
+        <li>Molly</li>
+        <li>Bailey</li>
+        <li>Shadow</li>
+        <li>Sam</li>
+        <li>Lady</li>
+    </ol>
+    <h3>Simple Order List.</h3>
+    <ol style="list-style-type: upper-roman;">
+        <li>Sri Lanka</li>
+        <li>India</li>
+        <li>Japan</li>
+        <li>USA</li>
+        <li>UK</li>
+    </ol>
+    <ol style="list-style-type:upper-alpha">
+        <li>Sri Lanka</li>
+        <li>India</li>
+        <li>Japan</li>
+        <li>USA</li>
+        <li>UK</li>
+    </ol>
+    <ol style="list-style-type:decimal-leading-zero">
+        <li>Sri Lanka</li>
+        <li>India</li>
+        <li>Japan</li>
+        <li>USA</li>
+        <li>UK</li>
+    </ol>
+    <ol style="list-style-type:lower-alpha">
+        <li>Sri Lanka</li>
+        <li>India</li>
+        <li>Japan</li>
+        <li>USA</li>
+        <li>UK</li>
+    </ol>
+
+    <!-- basic data list -->
+    <h2>Markup Language Definitions.</h2>
+    <dl>
+        <dt>SGML</dt>
+        <dd>The Standard Generalized Markup Language.</dd>
+        <dt>HTML</dt>
+        <dd>The Hper Text Markup Language.</dd>
+        <dd>The Markup Language you use to create Webpages.</dd>
+        <dt>XML</dt>
+        <dd>The Exentensible Markup Language.</dd>
+
+    </dl>
+
+    <p><em>Planets of the solar system.</em></p>
+    <dl>
+        <dt>Mercury</dt>
+        <dd>The smallest of the planets and one nearest the sun,having a sideral period of revolution about the sun of
+            88.0 days at a mean distance of 58.3 million kilometers (36.2 million miles) and a mean radius of
+            approximately 2,414 kilometers (1,500 miles). </dd>
+        <dt>Venus</dt>
+        <dd>The second plent from the sun,having a sideral period of revolution about the sun of 224.7 days at a mean
+            distance of 108.1 million kilometers (67.2 million miles) and a mean radius of approximately 6,052
+            kilometers (3,760 miles). </dd>
+        <dt>Earth</dt>
+        <dd>The third planet from the sun,having a sideral period of revolution about the sun of 365.26 days at a mean
+            distance of 149 million kilometers (92.96 million miles) and a mean radius of approximately 6,374 kilometers
+            (3,954 miles). </dd>
+    </dl>
+
+    <!-- nested order and unorder list -->
+    <h2>List of Indian States with thier capital</h2>
+    <ol>
+        <li>Delhi</li>
+        <ul>
+            <li>New Delhi</li>
+        </ul>
+        <li>Haryana</li>
+        <ul>
+            <li>Chandigarh</li>
+        </ul>
+        <li>Gujarat</li>
+        <ul>
+            <li>Gandhi Nagar</li>
+        </ul>
+        <li>Rajasthan</li>
+        <ul>
+            <li>Jaipur</li>
+        </ul>
+        <li>Maharastra</li>
+        <ul>
+            <li>Mumbai</li>
+        </ul>
+        <li>Uttar Pradesh</li>
+        <ul>
+            <li>Lucknow</li>
+        </ul>
+    </ol>
+
+    <!-- nested unorder list with anchor tags -->
+    <h2>HTML Cooking School </h2>
+    <h2>Reciepes</h2>
+    <p>Since this is an HTML tutorial,all links goto the sponge recipe.Just thought I'd warn you.</p>
+    <ul>
+        <li>Cakes</li>
+        <ul style="list-style-type:disc">
+            <li><a href="#">Plain Sponge</a></li>
+            <li><a href="#">Chocolate Cake</a></li>
+            <li><a href="#">Apple Tea Cake</a></li>
+        </ul>
+        <li>Biscuits</li>
+        <ul style="list-style-type:disc">
+            <li><a href="#">ANZAC Biscuits</a></li>
+            <li><a href="#">Jam Drops</a></li>
+            <li><a href="#">Melting Moments</a></li>
+        </ul>
+        <li>Breads/Quick breads</li>
+        <ul style="list-style-type:disc">
+            <li><a href="#">Damper</a></li>
+            <li><a href="#">Scones</a></li>
+        </ul>
+    </ul>
+
+    <!-- nested list  -->
+    <h3>Nesting Lists</h3>
+    <ol style="list-style-type: lower-roman;">
+        <li>item 1</li>
+        <ul style="list-style-type: circle;">
+            <li>sub item 1</li>
+            <li>sub item 2</li>
+            <ol style="list-style-type:lower-alpha">
+                <li>sub item 1</li>
+                <li>sub item 2</li>
+            </ol>
+        </ul>
+        <li>item 2</li>
+        <ol>
+            <li>sub item1</li>
+            <ul style="list-style-type: square;">
+                <li>sub item 1</li>
+                <li>sub item 2</li>
+            </ul>
+            <li>sub item2</li>
+        </ol>
+        <li>item 3</li>
+    </ol>
+
+    <!-- Fruits & vegitable list with nested list -->
+    <h2>Fruits and Vegitable list</h2>
+    <ul>
+        <li>Fruits</li>
+        <ul style="list-style-type: circle;">
+            <li>Bananas</li>
+            <li>Apples</li>
+            <ul style="list-style: square;">
+                <li>Green</li>
+                <li>Red</li>
+            </ul>
+            <li>Pears</li>
+        </ul>
+        <li>Vegitables</li>
+        <li>Meat</li>
+    </ul>
+   <!-- student lists -->
+    <h3>list of Students</h3>
+    <ol start="10" style="font-weight: bolder;">
+        <li style="color:orangered;">Jhon</li>
+        <li style="color:green;">Harish</li>
+        <li style="color:blue;">Plunket</li>
+    </ol>
+</body>
+
+</html>
