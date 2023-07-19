@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <script>
+        //45. If a five-digit number is input through the keyboard, write a program to calculate the sum of its digits. (Hint: Use the modulus operator ‘%’)
+        // 46. If a five-digit number is input through the keyboard, write a program to reverse the number.
+            var fiveDigitNumber =  +prompt("Enter distance between two cities");
+            var sum=0;
+            var reverse=''
+
+            while(fiveDigitNumber){
+                var remainder=fiveDigitNumber % 10;
+                sum+=remainder;
+                reverse+=remainder;
+                fiveDigitNumber=Math.floor(fiveDigitNumber/10);
+
+            }
+
+            document.write('five digit number sum'+" "+sum+'<br>')
+            document.write('five digit number reverse number'+" "+reverse+'<br>')
+            
+        </script>
+    </head>
+</html>

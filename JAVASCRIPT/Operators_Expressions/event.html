@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <table border="0" id="tb">
+        <thead id="tb1">
+
+        </thead>
+        <tbody id="tb2">
+
+        </tbody>
+    </table>
+    <script>
+
+        $.get('https://fakestoreapi.com/products/', (data) => {
+            genTableHeadUI(data)
+            genTableBodyUI(data)
+        })
+
+
+        function genTableHeadUI(data) {
+            var tr = document.createElement('tr');
+
+            for (a in data[0]) {
+                var th = document.createElement('th')
+                th.innerHTML = a
+                tr.appendChild(th)
+            }
+
+            var thead = document.getElementById('tb1')
+            thead.appendChild(tr)
+
+        }
+
+
+        function genTableBodyUI(data) {
+
+            data.forEach(function (elt) {
+                var tr = document.createElement('tr');
+
+                for (a in elt) {
+                    var td = document.createElement('td')
+
+                    switch (a) {
+                        case 'title': {
+                            var h3 = document.createElement('h3')
+                            h3.innerHTML = elt[a]
+                            td.appendChild(h3)
+                        }
+                            break;
+
+                        case 'image': {
+                            var img = document.createElement('img')
+                            img.setAttribute("src", elt[a]);
+                            img.setAttribute("width", "100");
+                            img.setAttribute("height", "100");
+                            img.setAttribute("alt", "product image")
+                            td.appendChild(img)
+                        }
+                            break;
+
+                        case 'price': {
+                            var strong = document.createElement('strong')
+                            strong.innerHTML = elt[a]
+                            td.appendChild(strong)
+                        }
+                            break;
+
+                        case 'description': {
+                            var p = document.createElement('p')
+                            p.innerHTML = elt[a]
+                            p.style.fontFamily = 'Arial'
+                            td.appendChild(p)
+                        }
+                            break;
+
+                        case 'rating': {
+                            var p = document.createElement('p')
+                            var rating = []
+
+                            for (var [key, value] of Object.entries(elt[a])) {
+                                rating.push(`${key}: ${value}`)
+                            }
+
+                            var result = rating.join(', ')
+                            td.innerHTML = result;
+                        }
+                            break;
+
+                        default: td.innerHTML = elt[a]
+                    }
+
+                    tr.appendChild(td)
+                }
+                var tbody = document.getElementById('tb2')
+                tbody.appendChild(tr)
+            })
+        }
+
+    </script>
+</body>
+
+</html>
